@@ -1,0 +1,3 @@
+<nav>
+  <img src="img/logo.png" alt="Arkan Engineering Logo" class="logo">
+</nav>

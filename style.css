@@ -1,1 +1,6 @@
-style.css
+.logo {
+    width: 150px;       /* Ajusta el ancho a tu gusto */
+    height: auto;        /* Mantiene la proporción original */
+    display: block;      /* Ayuda con el alineamiento */
+    margin: 10px;        /* Espacio alrededor del logo */
+}

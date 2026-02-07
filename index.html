@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arkan Engineering & Design</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body { margin: 0; font-family: 'Montserrat', sans-serif; background-color: #f8f9fa; color: #333; }
+
+        /* Navegación Superior */
+        nav {
+            background: #1a1a1a;
+            padding: 15px 5% ;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+
+        .logo-img { height: 45px; }
+        .nav-text { color: white; font-weight: bold; letter-spacing: 1px; }
+
+        /* Fondo Principal (Hero) */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                        url('img/fondo.jpg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+        }
+
+        .hero h1 { font-size: 3.5rem; margin: 0; text-transform: uppercase; }
+        .hero p { font-size: 1.2rem; margin: 20px 0 40px; opacity: 0.9; }
+
+        .btn-cotizar {
+            background-color: #ffeb3b;
+            color: #000;
+            padding: 18px 35px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 4px;
+            transition: 0.3s;
+            text-transform: uppercase;
+        }
+
+        .btn-cotizar:hover { background-color: #fdd835; transform: scale(1.05); }
+
+        /* Sección de Proyectos */
+        .seccion-proyectos { padding: 100px 5%; max-width: 1200px; margin: auto; }
+        .seccion-proyectos h2 { text-align: center; font-size: 2.5rem; margin-bottom: 50px; }
+
+        .grid-proyectos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .tarjeta {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            transition: 0.4s;
+        }
+
+        .tarjeta:hover { transform: translateY(-12px); }
+
+        .tarjeta img { width: 100%; height: 250px; object-fit: cover; }
+
+        .info { padding: 25px; }
+        .info h3 { margin-top: 0; color: #1a1a1a; }
+        .info p { color: #666; font-size: 0.95rem; line-height: 1.6; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <img src="img/logo.png" alt="Arkan Logo" class="logo-img">
+        <div class="nav-text">ARKAN ENGINEERING & DESIGN</div>
+    </nav>
+
+    <section class="hero">
+        <h1>ARKAN ENGINEERING & DESIGN</h1>
+        <p>Innovación y Solidez en cada proyecto de construcción.</p>
+        <a href="#contacto" class="btn-cotizar">Cotizar Proyecto</a>
+    </section>
+
+    <section class="seccion-proyectos">
+        <h2>Nuestros Proyectos</h2>
+        <div class="grid-proyectos">
+            
+            <div class="tarjeta">
+                <img src="img/proyecto1.jpg" alt="Obra 1">
+                <div class="info">
+                    <h3>Edificación Residencial</h3>
+                    <p>Diseño estructural y ejecución de obra con los más altos estándares de calidad.</p>
+                </div>
+            </div>
+
+            <div class="tarjeta">
+                <img src="img/proyecto2.jpg" alt="Obra 2">
+                <div class="info">
+                    <h3>Infraestructura Civil</h3>
+                    <p>Soluciones integrales en pavimentación, drenajes y obras de vialidad urbana.</p>
+                </div>
+            </div>
+
+            <div class="tarjeta">
+                <img src="img/proyecto3.jpg" alt="Obra 3">
+                <div class="info">
+                    <h3>Diseño Arquitectónico</h3>
+                    <p>Planificación y modelado 3D para proyectos modernos y funcionales.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+</html>

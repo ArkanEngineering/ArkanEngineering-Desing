@@ -7,30 +7,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     
     <style>
-        body { margin: 0; font-family: 'Montserrat', sans-serif; background-color: #f8f9fa; color: #333; }
+        body { margin: 0; font-family: 'Montserrat', sans-serif; background-color: #f4f4f4; color: #333; }
 
-        /* Navegación Superior */
+        /* Navegación */
         nav {
-            background: #1a1a1a;
-            padding: 15px 5% ;
+            background: rgba(0, 0, 0, 0.9);
+            padding: 15px 50px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             position: fixed;
             width: 100%;
-            top: 0;
             z-index: 1000;
             box-sizing: border-box;
         }
 
-        .<img src="img/logotipo.png" alt="Arkan Logo" class="logo-img">
-        .nav-text { color: white; font-weight: bold; letter-spacing: 1px; }
+        .nav-links { color: white; text-transform: uppercase; font-weight: bold; }
 
-        /* Fondo Principal (Hero) */
+        /* Sección Hero con imagen real de fondo */
         .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-                        url('img/fondo.jpg') no-repeat center center/cover;
-            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop') no-repeat center center/cover;
+            height: 80vh; /* Bajé un poco la altura para que se vea mejor en laptops */
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -40,114 +38,90 @@
             padding: 0 20px;
         }
 
-        .hero h1 { font-size: 3.5rem; margin: 0; text-transform: uppercase; }
-        .hero p { font-size: 1.2rem; margin: 20px 0 40px; opacity: 0.9; }
+        .hero h1 { font-size: 3rem; margin-bottom: 10px; }
 
-   /* --- Botón de Cotizar (Ya corregido) --- */
-.btn-cotizar {
-    background-color: #ffeb3b;
-    color: #000;
-    padding: 18px 35px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 4px;
-    transition: 0.3s;
-    text-transform: uppercase;
-    display: inline-block; /* Importante para que el padding funcione */
-}
+        .btn-cotizar {
+            background-color: #ffeb3b;
+            color: #000;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
 
-.btn-cotizar:hover { 
-    background-color: #fdd835; 
-    transform: scale(1.05); 
-
-}
-
-        /* Sección de Proyectos */
-        .seccion-proyectos { padding: 100px 5%; max-width: 1200px; margin: auto; }
-        .seccion-proyectos h2 { text-align: center; font-size: 2.5rem; margin-bottom: 50px; }
+        /* Sección Proyectos */
+        .proyectos-container { padding: 60px 20px; max-width: 1200px; margin: auto; }
+        .proyectos-container h2 { text-align: center; margin-bottom: 40px; font-size: 2.5rem; }
 
         .grid-proyectos {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
         }
 
-        .tarjeta {
+        .proyecto-card {
             background: white;
-            border-radius: 10px;
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-            transition: 0.4s;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transition: 0.3s;
         }
 
-        .tarjeta:hover { transform: translateY(-12px); }
+        .proyecto-card:hover { transform: translateY(-10px); }
 
-        .tarjeta img { width: 100%; height: 250px; object-fit: cover; }
+        /* Ajuste para que las imágenes se vean SIEMPRE */
+        .proyecto-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+            background-color: #ddd; /* Color gris si la imagen falla */
+        }
 
-        .info { padding: 25px; }
-        .info h3 { margin-top: 0; color: #1a1a1a; }
-        .info p { color: #666; font-size: 0.95rem; line-height: 1.6; }
+        .proyecto-info { padding: 20px; }
+        .proyecto-info h3 { margin: 0 0 10px 0; color: #222; }
+        .proyecto-info p { font-size: 0.9rem; color: #666; line-height: 1.5; }
     </style>
 </head>
 <body>
 
-    <nav style="display: flex; justify-content: space-between; align-items: center; padding: 20px 5%;">
-    <img src="logo.png" alt="Arkan Logo" style="height: 50px; width: auto;">
-    <div class="enlaces">
-        <a href="#inicio" style="margin-left: 20px; text-decoration: none; color: white;">Inicio</a>
-        <a href="#proyectos" style="margin-left: 20px; text-decoration: none; color: white;">Proyectos</a>
-    </div>
-</nav>
+    <nav>
+        <div style="color: #ffeb3b; font-weight: bold; font-size: 1.2rem;">ARKAN</div>
+        <div class="nav-links">Ingeniería & Diseño</div>
+    </nav>
 
-<header class="heroe">
-    <div class="contenido-heroe">
+    <section class="hero">
         <h1>ARKAN ENGINEERING & DESIGN</h1>
         <p>Innovación y Solidez en cada proyecto de construcción.</p>
         <a href="https://wa.me/18492731993" class="btn-cotizar">COTIZAR</a>
-    </div>
-</header>
-
-<section id="proyectos" class="sección-proyectos">
-    <h2>Nuestros Proyectos</h2>
-    <div class="proyectos-grid">
-        <div class="tarjeta">
-            <img src="proyecto1.jpg" alt="Edificación Residencial" style="width:100%">
-            <div style="padding: 20px;">
-                <h3>Edificación Residencial</h3>
-                <p>Diseño estructural y ejecución de obra con los más altos estándares.</p>
-            </div>
-        </div>
-        </div>
-</section>
-</header>
-</a>
     </section>
 
-    <section class="seccion-proyectos">
+    <section class="proyectos-container">
         <h2>Nuestros Proyectos</h2>
         <div class="grid-proyectos">
             
-            <div class="tarjeta">
-                <img src="img/proyecto1.jpg" alt="Obra 1">
-                <div class="info">
-                    <h3>Edificación Residencial</h3>
-                    <p>Diseño estructural y ejecución de obra con los más altos estándares de calidad.</p>
+            <div class="proyecto1">
+                <img src="https://images.unsplash.com/photo-1503387762-592dee58c160?q=80&w=2000&auto=format&fit=crop" alt="Edificaciones">
+                <div class="proyecto-info">
+                    <h3>Edificaciones Modernas</h3>
+                    <p>Cimentación y diseño estructural para complejos residenciales de alta gama.</p>
                 </div>
             </div>
 
-            <div class="tarjeta">
-               <img src="img/proyecto2.png" alt="Obra 2">
-                <div class="info">
-                    <h3>Remodelaciones</h3>
-                    <p>Soluciones integrales en pavimentación, drenajes y obras de vialidad urbana.</p>
+            <div class="proyecto2">
+                <img src="https://images.unsplash.com/photo-1590487988256-9ed24133863e?q=80&w=1928&auto=format&fit=crop" alt="Remodelaciones">
+                <div class="proyecto-info">
+                    <h3>Infraestructura Vial</h3>
+                    <p>Diseño y supervisión de proyectos de pavimentación y drenaje pluvial.</p>
                 </div>
             </div>
 
-            <div class="tarjeta">
-                <img src="img/proyecto3.jpg" alt="Obra 3">
-                <div class="info">
-                    <h3>Diseño Arquitectónico</h3>
-                    <p>Planificación y modelado 3D para proyectos modernos y funcionales.</p>
+            <div class="proyecto3">
+                <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=2070&auto=format&fit=crop" alt="Consultoría">
+                <div class="proyecto-info">
+                    <h3>Consultoría Técnica</h3>
+                    <p>Estudios de suelo y factibilidad para proyectos industriales.</p>
                 </div>
             </div>
 

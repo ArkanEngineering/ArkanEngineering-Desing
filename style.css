@@ -55,3 +55,58 @@
     margin: 0 0 10px 0;
     color: #333;
 }
+/* Fondo y tipografía general */
+.pag-proyectos {
+    background-color: #1a1a1a; /* Un gris muy oscuro, casi negro */
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Encabezado de la página */
+.header-proyectos {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('img/fondo-ingenieria.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.header-proyectos h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #ffcc00; /* El amarillo de tu logo ARKAN */
+}
+
+/* Botón Volver */
+.btn-volver {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #ffcc00;
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid #ffcc00;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn-volver:hover {
+    background-color: #ffcc00;
+    color: #000;
+}
+
+/* Ajuste de las tarjetas para que resalten en el fondo oscuro */
+.tarjeta-proyecto {
+    background: #2a2a2a; /* Gris un poco más claro que el fondo */
+    border: 1px solid #333;
+}
+
+.info-proyecto h3 {
+    color: #ffcc00;
+}
+
+.info-proyecto p {
+    color: #ccc;
+}

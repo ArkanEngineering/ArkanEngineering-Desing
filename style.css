@@ -4,3 +4,15 @@
     display: block;      /* Ayuda con el alineamiento */
     margin: 10px;        /* Espacio alrededor del logo */
 }
+.boton-proyecto {
+    text-decoration: none;  /* Quita el subrayado */
+    color: #ffffff;         /* Color del texto */
+    background-color: #007bff; /* Color de fondo (puedes cambiarlo) */
+    padding: 10px 20px;     /* Espacio interno */
+    border-radius: 5px;     /* Bordes redondeados */
+    display: inline-block;
+}
+
+.boton-proyecto:hover {
+    background-color: #0056b3; /* Cambia de color al pasar el mouse */
+}

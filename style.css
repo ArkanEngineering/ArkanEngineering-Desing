@@ -1,94 +1,20 @@
-.logo {
-    width: 150px;       /* Ajusta el ancho a tu gusto */
-    height: auto;        /* Mantiene la proporción original */
-    display: block;      /* Ayuda con el alineamiento */
-    margin: 10px;        /* Espacio alrededor del logo */
-}
-.boton-proyecto {
-    text-decoration: none;  /* Quita el subrayado */
-    color: #ffffff;         /* Color del texto */
-    background-color: #007bff; /* Color de fondo (puedes cambiarlo) */
-    padding: 10px 20px;     /* Espacio interno */
-    border-radius: 5px;     /* Bordes redondeados */
-    display: inline-block;
-}
-
-.boton-proyecto:hover {
-    background-color: #0056b3; /* Cambia de color al pasar el mouse */
-}
-/* Contenedor principal */
-.contenedor-proyectos {
-    display: grid;
-    /* Crea columnas de al menos 300px que se ajustan solas */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px; /* Espacio entre fotos */
-    padding: 20px;
-}
-
-/* Cada tarjeta de proyecto */
-.tarjeta-proyecto {
-    background: #f4f4f4;
-    border-radius: 8px;
-    overflow: hidden; /* Corta lo que sobresalga de los bordes */
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-}
-
-.tarjeta-proyecto:hover {
-    transform: translateY(-5px); /* Efecto de levante al pasar el mouse */
-}
-
-/* Estilo de las imágenes */
-.tarjeta-proyecto img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover; /* Hace que la foto llene el espacio sin deformarse */
-}
-
-/* Texto debajo de la foto */
-.info-proyecto {
-    padding: 15px;
-    text-align: center;
-}
-
-.info-proyecto h3 {
-    margin: 0 0 10px 0;
-    color: #333;
-}
-/* Fondo y tipografía general */
-.pag-proyectos {
-    background-color: #1a1a1a; /* Un gris muy oscuro, casi negro */
+/* --- ESTILOS PARA PAGINAS SECUNDARIAS --- */
+.residencial-page {
+    background-color: #0f0f0f !important; /* Fuerza el fondo negro */
     color: #ffffff;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
-    padding: 0;
-}
-
-/* Encabezado de la página */
-.header-proyectos {
+    padding: 40px 20px;
     text-align: center;
-    padding: 50px 20px;
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('img/fondo-ingenieria.jpg');
-    background-size: cover;
-    background-position: center;
 }
 
-.header-proyectos h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-    color: #ffcc00; /* El amarillo de tu logo ARKAN */
-}
-
-/* Botón Volver */
 .btn-volver {
     display: inline-block;
-    margin-bottom: 20px;
     color: #ffcc00;
     text-decoration: none;
-    font-weight: bold;
     border: 1px solid #ffcc00;
-    padding: 8px 15px;
+    padding: 10px 20px;
     border-radius: 5px;
+    margin-bottom: 40px;
     transition: 0.3s;
 }
 
@@ -97,16 +23,23 @@
     color: #000;
 }
 
-/* Ajuste de las tarjetas para que resalten en el fondo oscuro */
+.grid-proyectos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 .tarjeta-proyecto {
-    background: #2a2a2a; /* Gris un poco más claro que el fondo */
+    background: #1a1a1a;
+    border-radius: 12px;
+    overflow: hidden;
     border: 1px solid #333;
 }
 
-.info-proyecto h3 {
-    color: #ffcc00;
-}
-
-.info-proyecto p {
-    color: #ccc;
+.tarjeta-proyecto img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
 }

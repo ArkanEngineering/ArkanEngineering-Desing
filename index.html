@@ -220,65 +220,24 @@ body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
                 Nuestra misión es ser referentes en diseño y tecnología, ofreciendo un servicio personalizado que 
                 supere las expectativas de cada cliente en cada proyecto residencial o comercial.
             </p>
-     /* Contenedor principal para centrar todo */
-.seccion-info-final {
-    padding: 60px 20px;
-    background-color: #f9f9f9; /* Puedes cambiarlo a oscuro si prefieres */
-}
+    <section class="seccion-info-final">
+    <div class="fila-compañia">
+        
+        <div class="columna-imagen">
+            <img src="img/oficina1.png" alt="Ingeniería Arkan">
+        </div>
 
-/* La "Magia": Flexbox activa las dos columnas */
-.fila-compañia {
-    display: flex;
-    align-items: center;    /* Centra el texto verticalmente con la foto */
-    justify-content: center;
-    gap: 50px;              /* Espacio real entre foto y texto */
-    max-width: 1100px;
-    margin: 0 auto;
-}
+        <div class="columna-texto">
+            <h2>ARKAN ENGINEERING</h2>
+            <h3>Construyendo el futuro con bases sólidas</h3>
+            <p>Somos una empresa líder en el sector de la ingeniería, especializada en brindar soluciones estructurales e innovadoras. Con un equipo de expertos comprometidos con la excelencia...</p>
+            
+            <ul class="lista-valores-pro">
+                <li><strong>✔ Excelencia:</strong> Calidad técnica.</li>
+                <li><strong>✔ Innovación:</strong> Vanguardia tecnológica.</li>
+                <li><strong>✔ Integridad:</strong> Transparencia total.</li>
+            </ul>
+        </div>
 
-/* Control de la imagen */
-.columna-imagen {
-    flex: 1;                /* Toma el 50% del ancho disponible */
-}
-
-.columna-imagen img {
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
-
-/* Control del texto */
-.columna-texto {
-    flex: 1;                /* Toma el otro 50% del ancho */
-    text-align: left;
-}
-
-.columna-texto h2 {
-    color: #333;
-    font-size: 1.2rem;
-    margin-bottom: 5px;
-}
-
-.columna-texto h3 {
-    color: #ffcc00;         /* Amarillo Arkan */
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-}
-
-.lista-valores-pro {
-    list-style: none;
-    padding: 0;
-    margin-top: 20px;
-}
-
-.lista-valores-pro li {
-    margin-bottom: 10px;
-}
-
-/* IMPORTANTE: Si lo ves en un celular, se pondrán uno abajo del otro para que no se vea apretado */
-@media (max-width: 768px) {
-    .fila-compañia {
-        flex-direction: column;
-        text-align: center;
-    }
-}
+    </div>
+</section>

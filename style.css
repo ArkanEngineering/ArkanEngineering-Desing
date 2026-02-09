@@ -43,3 +43,66 @@
     height: 250px;
     object-fit: cover;
 }
+/* --- SECCIÓN INFORMACIÓN DE LA COMPAÑÍA --- */
+.seccion-empresa {
+    padding: 80px 20px;
+    background-color: #111; /* Fondo ligeramente diferente para separar secciones */
+    display: flex;
+    justify-content: center;
+}
+
+.contenido-empresa {
+    max-width: 1100px;
+    display: flex;
+    align-items: center;
+    gap: 50px; /* Espacio entre imagen y texto */
+    flex-wrap: wrap; /* Para que en celulares se ponga uno abajo del otro */
+}
+
+.imagen-empresa {
+    flex: 1;
+    min-width: 300px;
+}
+
+.imagen-empresa img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    border: 2px solid #ffcc00; /* Marco amarillo sutil */
+}
+
+.texto-empresa {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+}
+
+.texto-empresa h2 {
+    color: #ffcc00;
+    font-size: 1rem;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.texto-empresa h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.texto-empresa p {
+    line-height: 1.8;
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+/* Ajuste para celulares */
+@media (max-width: 768px) {
+    .contenido-empresa {
+        flex-direction: column;
+        text-align: center;
+    }
+    .texto-empresa {
+        text-align: center;
+    }
+}

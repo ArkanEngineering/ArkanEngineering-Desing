@@ -84,100 +84,101 @@
         text-align: center;
     }
 }
-
+/* =========================================
+   1. BASE Y RESET
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-/* Contenedor principal para centrar todo */
-.seccion-info-final {
+
+body {
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* =========================================
+   2. TARJETAS DE PROYECTOS (Grid Blanco)
+   ========================================= */
+.seccion-proyectos {
     padding: 60px 20px;
-    background-color: #f9f9f9; /* Puedes cambiarlo a oscuro si prefieres */
+    background: #fdfdfd;
 }
 
-/* La "Magia": Flexbox activa las dos columnas */
-.fila-compañia {
+.grid-proyectos {
     display: flex;
-    align-items: center;    /* Centra el texto verticalmente con la foto */
     justify-content: center;
-    gap: 50px;              /* Espacio real entre foto y texto */
-    max-width: 1100px;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
-/* Control de la imagen */
-.columna-imagen {
-    flex: 1;                /* Toma el 50% del ancho disponible */
-}
-
-.columna-imagen img {
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
-
-/* Control del texto */
-.columna-texto {
-    flex: 1;                /* Toma el otro 50% del ancho */
+.tarjeta {
+    background: #fff;
+    border-radius: 15px;
+    width: 350px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
     text-align: left;
+    overflow: hidden;
 }
 
-.columna-texto h2 {
-    color: #333;
-    font-size: 1.2rem;
-    margin-bottom: 5px;
+.tarjeta:hover {
+    transform: translateY(-10px);
 }
 
-.columna-texto h3 {
-    color: #ffcc00;         /* Amarillo Arkan */
-    font-size: 1.8rem;
-    margin-bottom: 20px;
+.tarjeta img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
 }
 
-.lista-valores-pro {
-    list-style: none;
-    padding: 0;
-    margin-top: 20px;
+.tarjeta-info {
+    padding: 20px;
 }
 
-.lista-valores-pro li {
+.tarjeta-info h3 {
+    font-size: 1.3rem;
     margin-bottom: 10px;
 }
 
-/* IMPORTANTE: Si lo ves en un celular, se pondrán uno abajo del otro para que no se vea apretado */
-@media (max-width: 768px) {
-    .fila-compañia {
-        flex-direction: column;
-        text-align: center;
-    }
-}
+/* =========================================
+   3. SECCIÓN EMPRESA (Lado a Lado - Oscuro)
+   ========================================= */
 .seccion-empresa-pro {
-    background-color: #1a1a1a; /* Fondo oscuro profesional */
-    padding: 80px 5%;
+    background-color: #1a1a1a;
+    padding: 100px 5%;
     color: #ffffff;
 }
 
 .contenedor-empresa {
     max-width: 1200px;
     margin: 0 auto;
-    display: flex; /* Activa las columnas */
+    display: flex; 
     align-items: center;
-    gap: 60px; /* Espacio entre imagen y texto */
-    flex-wrap: wrap; /* Ajuste para móviles */
+    gap: 60px;
+    flex-wrap: wrap; /* Permite bajar en móviles */
 }
 
 .bloque-imagen {
     flex: 1;
-    min-width: 300px;
+    min-width: 350px;
 }
 
 .bloque-imagen img {
     width: 100%;
     border-radius: 15px;
-    border: 2px solid #ffcc00; /* Marco amarillo Arkan */
-    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    border: 2px solid #ffcc00; /* Marco Amarillo Arkan */
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
 }
 
 .bloque-texto {
     flex: 1;
-    min-width: 300px;
+    min-width: 350px;
 }
 
 .subtitulo {
@@ -185,6 +186,7 @@
     letter-spacing: 3px;
     font-size: 0.9rem;
     font-weight: bold;
+    display: block;
 }
 
 .bloque-texto h2 {
@@ -199,18 +201,94 @@
 }
 
 .bloque-texto p {
-    line-height: 1.8;
     color: #cccccc;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
 .grid-valores {
     display: grid;
-    gap: 15px;
+    gap: 12px;
 }
 
-.valor-item span {
+.valor-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.check-icono {
     color: #ffcc00;
-    margin-right: 10px;
     font-weight: bold;
+}
+
+/* =========================================
+   4. FOOTER (Pie de Página)
+   ========================================= */
+.footer-arkan {
+    background-color: #0c0c0c;
+    color: #ffffff;
+    padding: 60px 5% 20px;
+    border-top: 4px solid #ffcc00;
+}
+
+.contenedor-footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-col h4 {
+    color: #ffcc00;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li a {
+    color: #888;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+    color: #ffcc00;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #222;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+/* =========================================
+   5. RESPONSIVIDAD (Móviles)
+   ========================================= */
+@media (max-width: 850px) {
+    .contenedor-empresa {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .bloque-imagen, .bloque-texto {
+        min-width: 100%;
+    }
+
+    .contenedor-footer {
+        flex-direction: column;
+        text-align: center;
+    }
 }

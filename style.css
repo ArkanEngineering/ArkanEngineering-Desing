@@ -106,38 +106,34 @@
         text-align: center;
     }
 }
-/* Estilos para los valores de la empresa */
-.valores-arkan {
-    margin-top: 30px;
-    display: grid;
-    gap: 15px;
+.info-compañia-container {
+    display: flex;          /* Esto pone imagen y texto en la misma fila */
+    align-items: center;    /* Centra el texto verticalmente con la imagen */
+    gap: 40px;              /* Espacio de separación entre ambos */
+    max-width: 1100px;
+    margin: 50px auto;      /* Centra todo el bloque en la página */
+    padding: 20px;
 }
 
-.valor-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 15px;
+.compañia-imagen {
+    flex: 1;                /* La imagen toma la mitad del espacio */
 }
 
-.valor-item .icono {
-    color: #ffcc00; /* El amarillo de ARKAN */
-    font-weight: bold;
-    font-size: 1.2rem;
-}
-
-.valor-item strong {
-    color: #fff;
+.compañia-imagen img {
+    width: 100%;
+    border-radius: 8px;
     display: block;
-    font-size: 1.1rem;
 }
 
-.valor-item span {
-    color: #aaa;
-    font-size: 0.95rem;
+.compañia-texto {
+    flex: 1;                /* El texto toma la otra mitad */
+    text-align: left;       /* Alinea el texto a la izquierda */
 }
 
-/* Efecto opcional: resaltar el valor al pasar el mouse */
-.valor-item:hover .icono {
-    transform: scale(1.2);
-    transition: 0.2s;
+/* Para que en celulares se vea uno arriba del otro */
+@media (max-width: 768px) {
+    .info-compañia-container {
+        flex-direction: column;
+        text-align: center;
+    }
 }

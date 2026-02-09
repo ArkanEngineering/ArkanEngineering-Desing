@@ -106,3 +106,38 @@
         text-align: center;
     }
 }
+/* Estilos para los valores de la empresa */
+.valores-arkan {
+    margin-top: 30px;
+    display: grid;
+    gap: 15px;
+}
+
+.valor-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.valor-item .icono {
+    color: #ffcc00; /* El amarillo de ARKAN */
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.valor-item strong {
+    color: #fff;
+    display: block;
+    font-size: 1.1rem;
+}
+
+.valor-item span {
+    color: #aaa;
+    font-size: 0.95rem;
+}
+
+/* Efecto opcional: resaltar el valor al pasar el mouse */
+.valor-item:hover .icono {
+    transform: scale(1.2);
+    transition: 0.2s;
+}

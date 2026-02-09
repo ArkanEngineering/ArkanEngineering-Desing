@@ -220,26 +220,3 @@ body {
     .bloque-texto-info { text-align: center; }
     .footer-socials { justify-content: center; }
 }
-/* Ajuste Navegación */
-.nav-principal {
-    background: rgba(0, 0, 0, 0.9);
-    padding: 15px 10%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
-}
-.nav-principal .logo { color: #ffeb3b; font-weight: bold; font-size: 1.5rem; }
-.nav-principal .nav-links { color: white; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; }
-
-/* Ajuste Formulario */
-.contacto-seccion { background-color: #1a1a1a; padding: 80px 10%; text-align: center; }
-.contenedor-contacto-form { max-width: 800px; margin: 0 auto; }
-.formulario-arkan { display: flex; flex-direction: column; gap: 15px; margin-top: 30px; }
-.grupo-input { display: flex; gap: 15px; }
-.formulario-arkan input, .formulario-arkan textarea {
-    padding: 15px; background: #2a2a2a; border: 1px solid #444; color: white; border-radius: 5px; width: 100%;
-}
-.boton-enviar { background: #ffcc00; color: black; padding: 15px; border: none; font-weight: bold; cursor: pointer; border-radius: 5px; }

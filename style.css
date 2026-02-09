@@ -292,3 +292,108 @@ body {
         text-align: center;
     }
 }
+/* --- FOOTER PROFESIONAL --- */
+.footer-arkan {
+    background-color: #0c0c0c; /* Fondo negro profundo para elegancia */
+    color: white;
+    padding: 80px 10% 20px 10%;
+    border-top: 4px solid #ffcc00; /* Línea de acento amarillo Arkan */
+}
+
+.footer-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 250px;
+}
+
+/* Estilo del Logo en Footer */
+.footer-info h4 { 
+    color: #ffcc00; 
+    font-size: 1.6rem; 
+    margin-bottom: 15px; 
+    letter-spacing: 1px;
+}
+.footer-info h4 span { 
+    color: white; 
+    display: block; 
+    font-size: 0.8rem; 
+    letter-spacing: 3px; 
+    opacity: 0.8;
+}
+
+/* Enlaces y Texto */
+.footer-grid h5 { 
+    color: #ffcc00; 
+    text-transform: uppercase; 
+    margin-bottom: 25px; 
+    font-size: 1rem;
+}
+
+.footer-links a {
+    display: block;
+    color: #cccccc;
+    text-decoration: none;
+    margin-bottom: 12px;
+    transition: all 0.3s ease;
+}
+
+.footer-links a:hover { 
+    color: #ffcc00; 
+    transform: translateX(5px); /* Efecto de desplazamiento al pasar el mouse */
+}
+
+/* ICONOS DE REDES SOCIALES */
+.footer-socials {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ffcc00;
+    color: #ffcc00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 0.8rem;
+    transition: 0.3s;
+}
+
+.social-icon:hover {
+    background-color: #ffcc00;
+    color: #000;
+    transform: translateY(-5px);
+}
+
+.footer-copy {
+    text-align: center;
+    margin-top: 60px;
+    padding-top: 25px;
+    border-top: 1px solid #222;
+    color: #555;
+    font-size: 0.85rem;
+}
+
+/* DISEÑO RESPONSIVO */
+@media (max-width: 768px) {
+    .footer-grid { 
+        flex-direction: column; 
+        text-align: center; 
+    }
+    .footer-socials { 
+        justify-content: center; 
+    }
+}

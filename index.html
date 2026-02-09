@@ -202,22 +202,7 @@ body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
 
 </body>
 </html>
-<section class="hero-arkan">
-  <div class="hero-container">
-    <div class="hero-image">
-      <img src="equipo-arkan.png" alt="Arkan Engineering Planos">
-    </div>
-    <div class="hero-content">
-      <span class="eyebrow">Ingeniería de Vanguardia</span>
-      <h1>ARKAN <span>ENGINEERING</span></h1>
-      <p class="tagline">Construyendo el futuro con bases sólidas.</p>
-      <p class="description">
-        Somos líderes en el sector, transformando visiones en realidades tangibles con precisión técnica y excelencia en diseño estructural.
-      </p>
-      <div class="cta-group">
-      </div>
-    </div>
-  </div>
+
 </section>
             </p>
   <section style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 50px; padding: 80px 10%; background-color: #222222; color: #ffffff; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
@@ -299,5 +284,20 @@ body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
     <div class="footer-copy">
         &copy; 2026 ARKAN ENGINEERING - Todos los derechos reservados.
     </div>
+    <script src="https://unpkg.com/scrollreveal"></script>
+<script>
+  ScrollReveal().reveal('.hero-content', { 
+    delay: 300, 
+    distance: '50px', 
+    origin: 'left',
+    duration: 1000 
+  });
+  ScrollReveal().reveal('.hero-image', { 
+    delay: 500, 
+    distance: '50px', 
+    origin: 'right',
+    duration: 1000 
+  });
+</script>
 </footer>
        

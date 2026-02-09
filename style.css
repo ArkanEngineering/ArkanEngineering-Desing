@@ -200,3 +200,69 @@
         text-align: center;
     }
 }
+.seccion-empresa-pro {
+    background-color: #1a1a1a; /* Fondo oscuro profesional */
+    padding: 80px 5%;
+    color: #ffffff;
+}
+
+.contenedor-empresa {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex; /* Activa las columnas */
+    align-items: center;
+    gap: 60px; /* Espacio entre imagen y texto */
+    flex-wrap: wrap; /* Ajuste para móviles */
+}
+
+.bloque-imagen {
+    flex: 1;
+    min-width: 300px;
+}
+
+.bloque-imagen img {
+    width: 100%;
+    border-radius: 15px;
+    border: 2px solid #ffcc00; /* Marco amarillo Arkan */
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.bloque-texto {
+    flex: 1;
+    min-width: 300px;
+}
+
+.subtitulo {
+    color: #ffcc00;
+    letter-spacing: 3px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.bloque-texto h2 {
+    font-size: 2.5rem;
+    margin: 10px 0;
+}
+
+.bloque-texto h3 {
+    color: #ffcc00;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.bloque-texto p {
+    line-height: 1.8;
+    color: #cccccc;
+    margin-bottom: 30px;
+}
+
+.grid-valores {
+    display: grid;
+    gap: 15px;
+}
+
+.valor-item span {
+    color: #ffcc00;
+    margin-right: 10px;
+    font-weight: bold;
+}

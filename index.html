@@ -4,158 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arkan Engineering & Design</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    
-    <style>
-        body { margin: 0; font-family: 'Montserrat', sans-serif; background-color: #f4f4f4; color: #333; }
-
-        /* Navegación */
-        nav {
-            background: rgba(0, 0, 0, 0.9);
-            padding: 15px 50px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: fixed;
-            width: 100%;
-            z-index: 1000;
-            box-sizing: border-box;
-        }
-
-        .nav-links { color: white; text-transform: uppercase; font-weight: bold; }
-
-        /* Sección Hero con imagen real de fondo */
-        .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-                        url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop') no-repeat center center/cover;
-            height: 80vh; /* Bajé un poco la altura para que se vea mejor en laptops */
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: white;
-            padding: 0 20px;
-        }
-
-        .hero h1 { font-size: 3rem; margin-bottom: 10px; }
-
-        .btn-cotizar {
-            background-color: #ffeb3b;
-            color: #000;
-            padding: 15px 30px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
-            transition: 0.3s;
-        }
-
-        /* Sección Proyectos */
-        .proyectos-container { padding: 60px 20px; max-width: 1200px; margin: auto; }
-        .proyectos-container h2 { text-align: center; margin-bottom: 40px; font-size: 2.5rem; }
-
-        .grid-proyectos {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-        }
-
-        .proyecto-card {
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-            transition: 0.3s;
-        }
-
-        .proyecto-card:hover { transform: translateY(-10px); }
-
-        /* Ajuste para que las imágenes se vean SIEMPRE */
-        .proyecto-card img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            display: block;
-            background-color: #ddd; /* Color gris si la imagen falla */
-        }
-
-        .proyecto-info { padding: 20px; }
-        .proyecto-info h3 { margin: 0 0 10px 0; color: #222; }
-        .proyecto-info p { font-size: 0.9rem; color: #666; line-height: 1.5; }
-        <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arkan Engineering & Design</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Segoe+UI&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-        /* Reset General */
-body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
 
-/* Sección Hero con Imagen de Fondo Correcta */
-.heroe {
-    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('img/fondo.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 80vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-}
-
-.heroe-content h1 { font-size: 3.5rem; margin: 0; font-weight: bold; }
-.heroe-content p { font-size: 1.2rem; margin: 20px 0 40px; opacity: 0.9; }
-
-/* Botón Cotizar (Amarillo) */
-.btn-cotizar {
-    background-color: #ffeb3b;
-    color: #000;
-    padding: 18px 35px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 4px;
-    transition: 0.3s;
-    display: inline-block;
-    text-transform: uppercase;
-}
-.btn-cotizar:hover { background-color: #fdd835; transform: scale(1.05); }
-
-/* Grid de Proyectos Profesional */
-.proyectos-container { padding: 80px 5%; text-align: center; background: #fff; }
-.proyectos-container h2 { font-size: 2.5rem; margin-bottom: 50px; color: #333; }
-
-.grid-proyectos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    max-width: 1200px;
-    margin: auto;
-}
-
-.proyecto-card {
-    background: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    transition: 0.3s;
-}
-.proyecto-card:hover { transform: translateY(-10px); }
-.proyecto-card img { width: 100%; height: 250px; object-fit: cover; }
-.proyecto-info { padding: 25px; text-align: left; }
-.proyecto-info h3 { margin: 0 0 10px 0; color: #222; }
-.proyecto-info p { color: #666; font-size: 0.95rem; line-height: 1.5; }
-    </style>
-
-    <nav>
-        <div style="color: #ffeb3b; font-weight: bold; font-size: 1.2rem;">ARKAN</div>
+    <nav class="nav-principal">
+        <div class="logo">ARKAN</div>
         <div class="nav-links">Ingeniería & Diseño</div>
     </nav>
 
-<header class="heroe">
+    <header class="heroe">
         <div class="heroe-content">
             <h1>ARKAN ENGINEERING & DESIGN</h1>
             <p>Innovación y Solidez en cada proyecto de construcción.</p>
@@ -163,36 +22,36 @@ body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
         </div>
     </header>
 
-    <section id="proyectos" class="proyectos-container">
+    <section id="proyectos" class="seccion-proyectos">
         <h2>Nuestros Proyectos</h2>
         <div class="grid-proyectos">
             
-    <div class="proyecto-card">
+            <div class="tarjeta">
                 <img src="img/proyecto1.jpg" alt="Edificación Residencial">
-              <a class="proyecto-info">
+                <div class="tarjeta-info">
                     <a href="residencial.html" style="text-decoration: none; color: inherit;">
-    <h3>Edificación Residencial</h3>
-</a>
+                        <h3>Edificación Residencial</h3>
+                    </a>
                     <p>Diseño estructural y ejecución de obra con los más altos estándares.</p>
-               </a>
+                </div>
             </div>
 
-            <div class="proyecto-card">
+            <div class="tarjeta">
                 <img src="img/proyecto2.png" alt="Infraestructura">
-                <div class="proyecto-info">
-                   <a href="remodelaciones.html" style="text-decoration: none; color: inherit;">
-    <h3>Remodelaciones e Infraestructura</h3>
-</a>
+                <div class="tarjeta-info">
+                    <a href="remodelaciones.html" style="text-decoration: none; color: inherit;">
+                        <h3>Remodelaciones e Infraestructura</h3>
+                    </a>
                     <p>Soluciones integrales en pavimentación y drenajes urbanos.</p>
                 </div>
             </div>
 
-            <div class="proyecto-card">
+            <div class="tarjeta">
                 <img src="img/proyecto3.jpg" alt="Diseño Arquitectónico">
-                <div class="proyecto-info">
-                  <a href="diseno.html" style="text-decoration: none; color: inherit;">
-    <h3>Diseño Arquitectónico</h3>
-</a>
+                <div class="tarjeta-info">
+                    <a href="diseno.html" style="text-decoration: none; color: inherit;">
+                        <h3>Diseño Arquitectónico</h3>
+                    </a>
                     <p>Planificación y modelado 3D para proyectos modernos.</p>
                 </div>
             </div>
@@ -200,122 +59,88 @@ body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
         </div>
     </section>
 
+    <section class="seccion-empresa-pro">
+        <div class="contenedor-empresa-ajustado">
+            <div class="bloque-imagen-mini">
+                <img src="img/equipo-arkan.png" alt="Ingeniería Arkan">
+            </div>
+
+            <div class="bloque-texto-info">
+                <span class="subtitulo">SOBRE NOSOTROS</span>
+                <h2>ARKAN ENGINEERING</h2>
+                <h3>Construyendo el futuro con bases sólidas</h3>
+                <p>
+                    Somos una empresa líder en el sector de la ingeniería, especializada en brindar soluciones estructurales e innovadoras. 
+                    Con un equipo de expertos comprometidos con la excelencia, transformamos visiones en realidades tangibles.
+                </p>
+                
+                <div class="grid-valores">
+                    <div class="valor-item">
+                        <span class="check-icono">✔</span> 
+                        <span><strong>Excelencia:</strong> Calidad técnica.</span>
+                    </div>
+                    <div class="valor-item">
+                        <span class="check-icono">✔</span> 
+                        <span><strong>Innovación:</strong> Vanguardia tecnológica.</span>
+                    </div>
+                    <div class="valor-item">
+                        <span class="check-icono">✔</span> 
+                        <span><strong>Integridad:</strong> Transparencia total.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contacto-seccion">
+        <div class="contenedor-contacto-form">
+            <h2>¿Tienes un proyecto en mente?</h2>
+            <p>Déjanos tus datos y un experto se pondrá en contacto contigo.</p>
+            
+            <form action="#" class="formulario-arkan">
+                <div class="grupo-input">
+                    <input type="text" placeholder="Nombre" required>
+                    <input type="email" placeholder="Correo" required>
+                </div>
+                <input type="text" placeholder="Asunto" required>
+                <textarea placeholder="Cuéntanos sobre tu proyecto..." rows="5" required></textarea>
+                <button type="submit" class="boton-enviar">ENVIAR MENSAJE</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer-arkan">
+        <div class="footer-grid">
+            <div class="footer-col footer-info">
+                <h4>ARKAN<span>ENGINEERING</span></h4>
+                <p>Excelencia técnica y diseño innovador en cada proyecto estructural.</p>
+                <div class="footer-socials">
+                    <a href="#" class="social-icon">FB</a>
+                    <a href="https://www.instagram.com/arkanengineeringdesign" class="social-icon">IG</a>
+                    <a href="#" class="social-icon">LK</a>
+                </div>
+            </div>
+
+            <div class="footer-col footer-links">
+                <h5>Navegación</h5>
+                <a href="#">Inicio</a>
+                <a href="residencial.html">Residencial</a>
+                <a href="remodelaciones.html">Remodelaciones</a>
+                <a href="diseno.html">Diseño</a>
+            </div>
+
+            <div class="footer-col footer-contacto">
+                <h5>Contacto</h5>
+                <p>📍 Sosúa, Rep. Dominicana</p>
+                <p>✉️ Constructoraancesps@gmail.com</p>
+                <p>📞 +1 849 273 1993</p>
+            </div>
+        </div>
+
+        <div class="footer-copy">
+            &copy; 2026 ARKAN ENGINEERING - Todos los derechos reservados.
+        </div>
+    </footer>
+
 </body>
 </html>
-<section class="seccion-empresa-pro">
-    <div class="contenedor-empresa-ajustado">
-        
-        <div class="bloque-imagen-mini">
-            <img src="img/equipo-arkan.png" alt="Ingeniería Arkan">
-        </div>
-
-        <div class="bloque-texto-info">
-            <span class="subtitulo">SOBRE NOSOTROS</span>
-            <h2>ARKAN ENGINEERING</h2>
-            <h3>Construyendo el futuro con bases sólidas</h3>
-            <p>
-                Somos una empresa líder en el sector de la ingeniería, especializada en brindar soluciones estructurales e innovadoras. 
-                Con un equipo de expertos comprometidos con la excelencia, transformamos visiones en realidades tangibles.
-            </p>
-            
-            <div class="grid-valores">
-                <div class="valor-item">
-                    <span class="check-icono">✔</span> 
-                    <span><strong>Excelencia:</strong> Calidad técnica.</span>
-                </div>
-                <div class="valor-item">
-                    <span class="check-icono">✔</span> 
-                    <span><strong>Innovación:</strong> Vanguardia tecnológica.</span>
-                </div>
-                <div class="valor-item">
-                    <span class="check-icono">✔</span> 
-                    <span><strong>Integridad:</strong> Transparencia total.</span>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</section>
-</section>
-            </p>
-  <section style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 50px; padding: 80px 10%; background-color: #222222; color: #ffffff; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
-
-    <div style="flex: 1; min-width: 320px; max-width: 600px;">
-        <img src="img/oficina1.png" alt="Equipo Arkan Engineering" style="width: 100%; border-radius: 15px; border: 2px solid #ffcc00; box-shadow: 0 20px 40px rgba(0,0,0,0.5);">
-    </div>
-
-    <div style="flex: 1; min-width: 320px; text-align: left;">
-        <h2 style="color: #ffffff; font-size: 1.1rem; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 10px; opacity: 0.8;">ARKAN ENGINEERING</h2>
-        <h3 style="color: #ffcc00; font-size: 2.5rem; margin: 0 0 25px 0; line-height: 1.1; font-weight: bold;">Construyendo el futuro con bases sólidas</h3>
-        
-        <p style="color: #cccccc; line-height: 1.8; font-size: 1.1rem; margin-bottom: 30px;">
-            Somos una empresa líder en el sector de la ingeniería, especializada en brindar soluciones estructurales e innovadoras. Con un equipo de expertos comprometidos con la excelencia, transformamos visiones en realidades tangibles.
-        </p>
-
-        <div style="display: grid; gap: 15px;">
-            <div style="display: flex; align-items: center; gap: 15px;">
-                <span style="color: #ffcc00; font-size: 1.5rem;">✓</span>
-                <span style="font-size: 1.1rem;"><strong style="color: #ffcc00;">Excelencia:</strong> Calidad técnica garantizada.</span>
-            </div>
-            <div style="display: flex; align-items: center; gap: 15px;">
-                <span style="color: #ffcc00; font-size: 1.5rem;">✓</span>
-                <span style="font-size: 1.1rem;"><strong style="color: #ffcc00;">Innovación:</strong> Vanguardia tecnológica.</span>
-            </div>
-            <div style="display: flex; align-items: center; gap: 15px;">
-                <span style="color: #ffcc00; font-size: 1.5rem;">✓</span>
-                <span style="font-size: 1.1rem;"><strong style="color: #ffcc00;">Integridad:</strong> Transparencia total.</span>
-            </div>
-        </div>
-    </div>
-<section class="contacto-seccion" style="background-color: #1a1a1a; padding: 80px 10%; color: white; text-align: center;">
-    <div style="max-width: 800px; margin: 0 auto;">
-        <h2 style="color: #ffcc00; font-size: 2.2rem; margin-bottom: 10px;">¿Tienes un proyecto en mente?</h2>
-        <p style="color: #ccc; margin-bottom: 40px;">Déjanos tus datos y un experto de <strong>Arkan Engineering</strong> se pondrá en contacto contigo.</p>
-        
-        <form style="display: flex; flex-direction: column; gap: 20px; text-align: left;">
-            <div style="display: flex; gap: 20px; flex-wrap: wrap;">
-                <input type="text" placeholder="Nombre" required style="flex: 1; min-width: 250px; padding: 15px; background: #2a2a2a; border: 1px solid #444; border-radius: 5px; color: white;">
-                <input type="email" placeholder="Correo" required style="flex: 1; min-width: 250px; padding: 15px; background: #2a2a2a; border: 1px solid #444; border-radius: 5px; color: white;">
-            </div>
-            <input type="text" placeholder="Asunto" required style="padding: 15px; background: #2a2a2a; border: 1px solid #444; border-radius: 5px; color: white;">
-            <textarea placeholder="Cuéntanos sobre tu proyecto..." rows="5" required style="padding: 15px; background: #2a2a2a; border: 1px solid #444; border-radius: 5px; color: white; resize: none;"></textarea>
-            
-            <button type="submit" style="background-color: #ffcc00; color: #000; padding: 18px; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; transition: 0.3s; letter-spacing: 1px;">
-                ENVIAR MENSAJE
-            </button>
-        </form>
-    </div>
-</section>
-<footer class="footer-arkan">
-    <div class="footer-grid">
-        <div class="footer-col footer-info">
-            <h4>ARKAN<span>ENGINEERING</span></h4>
-            <p>Excelencia técnica y diseño innovador en cada proyecto estructural.</p>
-            <div class="footer-socials">
-                <a href="#" class="social-icon">FB</a>
-                <a href="#" class="social-icon">arkanengineeringdesign</a>
-                <a href="#" class="social-icon">LK</a>
-            </div>
-        </div>
-
-        <div class="footer-col footer-links">
-            <h5>Navegación</h5>
-            <a href="#">Inicio</a>
-            <a href="#">Residencial</a>
-            <a href="#">Remodelaciones</a>
-            <a href="#">Diseño</a>
-        </div>
-
-        <div class="footer-col footer-contacto">
-            <h5>Contacto</h5>
-            <p>📍 Sosua, Rep. Dominicana</p>
-            <p>✉️ Constructoraancesps@gmail.com</p>
-            <p>📞 +1 849 273 1993</p>
-        </div>
-    </div>
-
-    <div class="footer-copy">
-        &copy; 2026 ARKAN ENGINEERING - Todos los derechos reservados.
-    </div>
-</footer>
-       

@@ -43,29 +43,7 @@
     height: 250px;
     object-fit: cover;
 }
-/* --- SECCIÓN INFORMACIÓN DE LA COMPAÑÍA --- */
-.seccion-empresa {
-    padding: 80px 20px;
-    background-color: #111; /* Fondo ligeramente diferente para separar secciones */
-    display: flex;
-    justify-content: center;
 }
-
-.contenido-empresa {
-    max-width: 1100px;
-    display: flex;
-    align-items: center;
-    gap: 50px; /* Espacio entre imagen y texto */
-    flex-wrap: wrap; /* Para que en celulares se ponga uno abajo del otro */
-}
-
-.imagen-empresa {
-    flex: 1;
-    min-width: 300px;
-}
-
-.imagen-empresa img {
-    width: 100%;
     border-radius: 15px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.5);
     border: 2px solid #ffcc00; /* Marco amarillo sutil */
@@ -106,37 +84,7 @@
         text-align: center;
     }
 }
-.contenedor-info {
-    display: flex;          /* Alinea los hijos (imagen y texto) en una fila */
-    flex-direction: row;    /* Asegura que sea horizontal */
-    align-items: center;    /* Centra el texto verticalmente con la imagen */
-    gap: 40px;              /* Separa la imagen del texto */
-    max-width: 1200px;
-    margin: 50px auto;      /* Centra todo el bloque en la pantalla */
-    padding: 20px;
-}
 
-.bloque-imagen {
-    flex: 1;                /* La imagen ocupa el 50% */
-}
-
-.bloque-imagen img {
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-}
-
-.bloque-texto {
-    flex: 1;                /* El texto ocupa el otro 50% */
-    text-align: left;       /* Asegura que el texto inicie a la izquierda */
-}
-
-/* Para que en celulares no se vea apretado, se vuelven a poner uno abajo del otro */
-@media (max-width: 768px) {
-    .contenedor-info {
-        flex-direction: column;
-        text-align: center;
-    }
 }
 /* Contenedor principal para centrar todo */
 .seccion-info-final {

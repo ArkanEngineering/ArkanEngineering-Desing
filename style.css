@@ -1,91 +1,5 @@
-/* --- ESTILOS PARA PAGINAS SECUNDARIAS --- */
-.residencial-page {
-    background-color: #0f0f0f !important; /* Fuerza el fondo negro */
-    color: #ffffff;
-    margin: 0;
-    padding: 40px 20px;
-    text-align: center;
-}
-
-.btn-volver {
-    display: inline-block;
-    color: #ffcc00;
-    text-decoration: none;
-    border: 1px solid #ffcc00;
-    padding: 10px 20px;
-    border-radius: 5px;
-    margin-bottom: 40px;
-    transition: 0.3s;
-}
-
-.btn-volver:hover {
-    background-color: #ffcc00;
-    color: #000;
-}
-
-.grid-proyectos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.tarjeta-proyecto {
-    background: #1a1a1a;
-    border-radius: 12px;
-    overflow: hidden;
-    border: 1px solid #333;
-}
-
-.tarjeta-proyecto img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-}
-}
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
-    border: 2px solid #ffcc00; /* Marco amarillo sutil */
-}
-
-.texto-empresa {
-    flex: 1;
-    min-width: 300px;
-    text-align: left;
-}
-
-.texto-empresa h2 {
-    color: #ffcc00;
-    font-size: 1rem;
-    letter-spacing: 3px;
-    margin-bottom: 10px;
-}
-
-.texto-empresa h3 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #fff;
-}
-
-.texto-empresa p {
-    line-height: 1.8;
-    color: #ccc;
-    margin-bottom: 15px;
-}
-
-/* Ajuste para celulares */
-@media (max-width: 768px) {
-    .contenido-empresa {
-        flex-direction: column;
-        text-align: center;
-    }
-    .texto-empresa {
-        text-align: center;
-    }
-}
 /* =========================================
-   1. BASE Y RESET
+   1. CONFIGURACIÓN BASE (RESET)
    ========================================= */
 * {
     margin: 0;
@@ -98,13 +12,42 @@ body {
     background-color: #ffffff;
     color: #333;
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 /* =========================================
-   2. TARJETAS DE PROYECTOS (Grid Blanco)
+   2. ESTILOS PÁGINAS SECUNDARIAS (Residencial, etc)
+   ========================================= */
+.residencial-page {
+    background-color: #0f0f0f !important;
+    color: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
+    min-height: 100vh;
+}
+
+.btn-volver {
+    display: inline-block;
+    color: #ffcc00;
+    text-decoration: none;
+    border: 1px solid #ffcc00;
+    padding: 10px 25px;
+    border-radius: 5px;
+    margin-bottom: 40px;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.btn-volver:hover {
+    background-color: #ffcc00;
+    color: #000;
+}
+
+/* =========================================
+   3. SECCIÓN PROYECTOS (Grid de Tarjetas)
    ========================================= */
 .seccion-proyectos {
-    padding: 60px 20px;
+    padding: 80px 20px;
     background: #fdfdfd;
 }
 
@@ -123,7 +66,6 @@ body {
     width: 350px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.08);
     transition: transform 0.3s ease;
-    text-align: left;
     overflow: hidden;
 }
 
@@ -131,27 +73,22 @@ body {
     transform: translateY(-10px);
 }
 
-.tarjeta img {
+.tarjeta img, .tarjeta-proyecto img {
     width: 100%;
-    height: 220px;
+    height: 250px;
     object-fit: cover;
 }
 
 .tarjeta-info {
-    padding: 20px;
-}
-
-.tarjeta-info h3 {
-    font-size: 1.3rem;
-    margin-bottom: 10px;
+    padding: 25px;
 }
 
 /* =========================================
-   3. SECCIÓN EMPRESA (Lado a Lado - Oscuro)
+   4. SECCIÓN EMPRESA (Lado a Lado - Premium)
    ========================================= */
 .seccion-empresa-pro {
     background-color: #1a1a1a;
-    padding: 100px 5%;
+    padding: 100px 10%;
     color: #ffffff;
 }
 
@@ -161,24 +98,24 @@ body {
     display: flex; 
     align-items: center;
     gap: 60px;
-    flex-wrap: wrap; /* Permite bajar en móviles */
+    flex-wrap: wrap;
 }
 
 .bloque-imagen {
     flex: 1;
-    min-width: 350px;
+    min-width: 320px;
 }
 
 .bloque-imagen img {
     width: 100%;
     border-radius: 15px;
-    border: 2px solid #ffcc00; /* Marco Amarillo Arkan */
+    border: 2px solid #ffcc00;
     box-shadow: 0 20px 40px rgba(0,0,0,0.5);
 }
 
 .bloque-texto {
     flex: 1;
-    min-width: 350px;
+    min-width: 320px;
 }
 
 .subtitulo {
@@ -187,179 +124,59 @@ body {
     font-size: 0.9rem;
     font-weight: bold;
     display: block;
+    margin-bottom: 10px;
 }
 
-.bloque-texto h2 {
-    font-size: 2.5rem;
-    margin: 10px 0;
-}
+.bloque-texto h2 { font-size: 2.8rem; margin: 0; line-height: 1.2; }
+.bloque-texto h3 { color: #ffcc00; font-size: 1.6rem; margin: 10px 0 25px; }
+.bloque-texto p { color: #cccccc; margin-bottom: 25px; font-size: 1.05rem; }
 
-.bloque-texto h3 {
-    color: #ffcc00;
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-}
-
-.bloque-texto p {
-    color: #cccccc;
-    margin-bottom: 25px;
-}
-
-.grid-valores {
-    display: grid;
-    gap: 12px;
-}
-
-.valor-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.check-icono {
-    color: #ffcc00;
-    font-weight: bold;
-}
+.grid-valores { display: grid; gap: 15px; }
+.valor-item { display: flex; align-items: center; gap: 12px; }
+.check-icono { color: #ffcc00; font-weight: bold; font-size: 1.2rem; }
 
 /* =========================================
-   4. FOOTER (Pie de Página)
+   5. FOOTER PROFESIONAL (Con Redes Sociales)
    ========================================= */
 .footer-arkan {
     background-color: #0c0c0c;
-    color: #ffffff;
-    padding: 60px 5% 20px;
-    border-top: 4px solid #ffcc00;
-}
-
-.contenedor-footer {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 40px;
-}
-
-.footer-col {
-    flex: 1;
-    min-width: 200px;
-}
-
-.footer-col h4 {
-    color: #ffcc00;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-}
-
-.footer-col ul {
-    list-style: none;
-}
-
-.footer-col ul li a {
-    color: #888;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.footer-col ul li a:hover {
-    color: #ffcc00;
-}
-
-.footer-bottom {
-    text-align: center;
-    margin-top: 40px;
-    padding-top: 20px;
-    border-top: 1px solid #222;
-    color: #555;
-    font-size: 0.9rem;
-}
-
-/* =========================================
-   5. RESPONSIVIDAD (Móviles)
-   ========================================= */
-@media (max-width: 850px) {
-    .contenedor-empresa {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .bloque-imagen, .bloque-texto {
-        min-width: 100%;
-    }
-
-    .contenedor-footer {
-        flex-direction: column;
-        text-align: center;
-    }
-}
-/* --- FOOTER PROFESIONAL --- */
-.footer-arkan {
-    background-color: #0c0c0c; /* Fondo negro profundo para elegancia */
     color: white;
-    padding: 80px 10% 20px 10%;
-    border-top: 4px solid #ffcc00; /* Línea de acento amarillo Arkan */
+    padding: 80px 10% 30px;
+    border-top: 4px solid #ffcc00;
 }
 
 .footer-grid {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 50px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.footer-col {
-    flex: 1;
-    min-width: 250px;
-}
+.footer-col { flex: 1; min-width: 250px; }
 
-/* Estilo del Logo en Footer */
-.footer-info h4 { 
-    color: #ffcc00; 
-    font-size: 1.6rem; 
-    margin-bottom: 15px; 
-    letter-spacing: 1px;
-}
-.footer-info h4 span { 
-    color: white; 
-    display: block; 
-    font-size: 0.8rem; 
-    letter-spacing: 3px; 
-    opacity: 0.8;
-}
+.footer-info h4 { color: #ffcc00; font-size: 1.6rem; margin-bottom: 15px; }
+.footer-info h4 span { color: white; display: block; font-size: 0.8rem; letter-spacing: 3px; opacity: 0.7; }
 
-/* Enlaces y Texto */
-.footer-grid h5 { 
-    color: #ffcc00; 
-    text-transform: uppercase; 
-    margin-bottom: 25px; 
-    font-size: 1rem;
-}
+.footer-grid h5 { color: #ffcc00; text-transform: uppercase; margin-bottom: 25px; font-size: 1rem; }
 
 .footer-links a {
     display: block;
     color: #cccccc;
     text-decoration: none;
     margin-bottom: 12px;
-    transition: all 0.3s ease;
+    transition: 0.3s;
 }
 
-.footer-links a:hover { 
-    color: #ffcc00; 
-    transform: translateX(5px); /* Efecto de desplazamiento al pasar el mouse */
-}
+.footer-links a:hover { color: #ffcc00; transform: translateX(5px); }
 
-/* ICONOS DE REDES SOCIALES */
-.footer-socials {
-    display: flex;
-    gap: 15px;
-    margin-top: 20px;
-}
+/* ICONOS REDES SOCIALES */
+.footer-socials { display: flex; gap: 15px; margin-top: 25px; }
 
 .social-icon {
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
     border: 1px solid #ffcc00;
     color: #ffcc00;
     display: flex;
@@ -368,7 +185,6 @@ body {
     text-decoration: none;
     border-radius: 50%;
     font-weight: bold;
-    font-size: 0.8rem;
     transition: 0.3s;
 }
 
@@ -387,13 +203,20 @@ body {
     font-size: 0.85rem;
 }
 
-/* DISEÑO RESPONSIVO */
-@media (max-width: 768px) {
-    .footer-grid { 
-        flex-direction: column; 
-        text-align: center; 
+/* =========================================
+   6. RESPONSIVIDAD (Móviles y Tablets)
+   ========================================= */
+@media (max-width: 850px) {
+    .contenedor-empresa, .footer-grid {
+        flex-direction: column;
+        text-align: center;
     }
-    .footer-socials { 
-        justify-content: center; 
+    
+    .bloque-imagen, .bloque-texto, .footer-col {
+        min-width: 100%;
     }
+
+    .footer-socials { justify-content: center; }
+
+    .bloque-texto h2 { font-size: 2rem; }
 }

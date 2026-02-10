@@ -136,3 +136,94 @@ h1 {
         order: -1; /* La imagen sube arriba en móviles */
     }
 }
+.footer-moderno {
+    position: relative;
+    background-image: url('tu-imagen-de-ciudad.jpg'); /* Imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+}
+
+.footer-overlay {
+    background: rgba(10, 20, 30, 0.85); /* Capa oscura para legibilidad */
+    padding: 80px 5% 20px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+}
+
+/* Estilo del Logo en el Footer */
+.branding h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.branding h2 span {
+    color: #00e5ff; /* Cian neón de la imagen */
+    font-weight: 300;
+}
+
+.footer-col h3 {
+    color: #00e5ff;
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+/* Iconos de Redes Sociales Circulares */
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    width: 35px;
+    height: 35px;
+    border: 1px solid #00e5ff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #00e5ff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    background: #00e5ff;
+    color: #000;
+    box-shadow: 0 0 15px #00e5ff;
+}
+
+/* Sección de Certificaciones */
+.cert-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.cert-item {
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.cert-item img {
+    width: 50px;
+    filter: drop-shadow(0 0 5px #00e5ff); /* Brillo cian en logos */
+    margin-bottom: 5px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 60px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: 0.9rem;
+    color: #94a3b8;
+}

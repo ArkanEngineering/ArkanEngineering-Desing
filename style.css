@@ -136,31 +136,3 @@ h1 {
         order: -1; /* La imagen sube arriba en móviles */
     }
 }
-.hero-arkan {
-  background: url('equipo-arkan.jpg') no-repeat center center/cover;
-  height: 80vh;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end; /* Alinea el texto a la derecha como en la imagen */
-  padding: 5%;
-}
-
-.content-overlay {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px); /* Efecto de desenfoque moderno */
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 40px;
-  border-radius: 15px;
-  color: white;
-  max-width: 450px;
-}
-
-.btn-primary {
-  background-color: #00A3FF;
-  color: white;
-  border: none;
-  padding: 12px 25px;
-  border-radius: 5px;
-  font-weight: bold;
-  cursor: pointer;
-}

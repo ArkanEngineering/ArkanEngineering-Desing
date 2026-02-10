@@ -1,4 +1,9 @@
-/* =========================================
+img {
+  max-width: 100%;  /* La imagen nunca será más ancha que la pantalla */
+  height: auto;     /* Mantiene la proporción para que no se vea estirada */
+  display: block;   /* Elimina espacios en blanco extraños debajo */
+  margin: 20px auto; /* La centra y le da espacio arriba y abajo */
+}/* =========================================
    1. VARIABLES Y CONFIGURACIÓN (Unificado)
    ========================================= */
 :root {

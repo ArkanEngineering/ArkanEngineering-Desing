@@ -273,3 +273,30 @@ body {
         grid-template-columns: 1fr;
     }
 }
+/* Definición de la animación de entrada */
+@keyframes entradaSuave {
+    from {
+        opacity: 0;
+        transform: translateY(30px); /* Empieza 30px abajo */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);    /* Termina en su sitio */
+    }
+}
+
+/* Aplicar la animación a las tarjetas */
+.tarjeta-proyecto {
+    animation: entradaSuave 0.8s ease-out forwards;
+    opacity: 0; /* Se mantiene invisible hasta que empieza la animación */
+}
+
+/* Retraso para que la segunda tarjeta aparezca un poco después (Efecto Cascada) */
+.tarjeta-proyecto:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+/* Si agregas una tercera más adelante, usa esto: */
+.tarjeta-proyecto:nth-child(3) {
+    animation-delay: 0.4s;
+}

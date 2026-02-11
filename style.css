@@ -136,89 +136,140 @@ h1 {
         order: -1; /* La imagen sube arriba en móviles */
     }
 }
-:root {
-    --naranja-arkan: #d37d3d;
-    --azul-oscuro: #34495e;
-    --gris-fondo: #e9e9e7;
+/* Reset y Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Inter', sans-serif;
-    background-color: var(--gris-fondo);
-    /* Aquí puedes poner una imagen de un edificio con opacidad baja */
-    background-image: linear-gradient(rgba(233, 233, 231, 0.9), rgba(233, 233, 231, 0.9)), 
-                      url('img/fondo-arquitectura.jpg');
-    background-attachment: fixed;
-    background-size: cover;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f8f9fa; /* Fondo gris muy claro y profesional */
+    color: #333;
+    line-height: 1.6;
 }
 
-/* Botón Volver Profesional */
+.contenedor-principal {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* --- BOTÓN VOLVER (Mejorado) --- */
+.nav-superior {
+    margin-bottom: 40px;
+}
+
 .btn-volver-pro {
-    display: inline-flex;
-    align-items: center;
-    padding: 10px 20px;
-    background: var(--naranja-arkan);
-    color: white;
     text-decoration: none;
-    border-radius: 8px 25px 25px 8px; /* Diseño asimétrico moderno */
+    color: #555;
+    font-size: 0.85rem;
     font-weight: bold;
-    font-size: 0.8rem;
-    box-shadow: 0 4px 15px rgba(211, 125, 61, 0.3);
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
     transition: 0.3s;
 }
 
 .btn-volver-pro:hover {
-    transform: translateX(-5px);
-    background: var(--azul-oscuro);
+    color: #d37d3d; /* Naranja Arkan */
 }
 
-/* Títulos con sombra sutil */
-h1 {
-    font-size: 2.8rem;
-    color: #222;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.05);
+.btn-volver-pro .flecha {
+    margin-right: 8px;
+    font-size: 1.2rem;
+}
+
+/* --- ENCABEZADO --- */
+.encabezado {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.encabezado h1 {
+    font-size: 2.2rem;
+    color: #2c3e50;
+    letter-spacing: 1px;
 }
 
 .resaltado {
-    color: var(--naranja-arkan);
+    color: #d37d3d; /* El naranja que viste en el diseño */
 }
 
-/* Tarjetas Estilo "Glassmorphism" sutil */
+.subtitulo {
+    color: #777;
+    margin-top: 10px;
+}
+
+/* --- GRID Y TARJETAS (Efecto Profesional) --- */
+.grid-proyectos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 30px;
+}
+
 .tarjeta-proyecto {
     position: relative;
-    border-radius: 20px;
+    border-radius: 20px; /* Bordes redondeados como la imagen */
     overflow: hidden;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-    border: 1px solid rgba(255,255,255,0.3);
-    transition: 0.4s;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    height: 400px;
+    cursor: pointer;
 }
 
-.info-flotante {
+.tarjeta-proyecto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+/* Capa de información (aparece al pasar el mouse) */
+.capa-detalle {
     position: absolute;
-    bottom: 20px;
-    left: 20px;
-    right: 20px;
-    background: rgba(52, 73, 94, 0.9);
-    padding: 20px;
-    border-radius: 12px;
+    bottom: -100%; /* Escondido abajo */
+    left: 0;
+    width: 100%;
+    background: rgba(44, 62, 80, 0.9); /* Fondo oscuro elegante */
+    padding: 30px;
     color: white;
-    backdrop-filter: blur(5px); /* Desenfoque de fondo */
+    transition: bottom 0.4s ease;
 }
 
-.btn-detalles {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 5px 15px;
-    border: 1px solid var(--naranja-arkan);
-    color: var(--naranja-arkan);
-    text-decoration: none;
-    border-radius: 4px;
+.tarjeta-proyecto:hover .capa-detalle {
+    bottom: 0; /* Sube al hacer hover */
+}
+
+.tarjeta-proyecto:hover img {
+    transform: scale(1.1); /* Efecto zoom */
+}
+
+.capa-detalle h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.btn-ver {
+    margin-top: 15px;
+    background: transparent;
+    border: 1px solid #d37d3d;
+    color: #d37d3d;
+    padding: 8px 20px;
+    border-radius: 5px;
+    cursor: pointer;
     font-weight: bold;
+    transition: 0.3s;
 }
 
-.btn-detalles:hover {
-    background: var(--naranja-arkan);
+.btn-ver:hover {
+    background: #d37d3d;
     color: white;
+}
+
+/* Responsive para celulares */
+@media (max-width: 600px) {
+    .grid-proyectos {
+        grid-template-columns: 1fr;
+    }
 }

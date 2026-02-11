@@ -3,43 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Residencial - ARKAN</title>
+    <title>Proyectos - ARKAN</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body class="residencial-page">
+<body>
 
-    <div class="contenedor-principal">
-        <nav class="nav-superior">
-            <a href="index.html" class="btn-volver-pro">
-                <span class="flecha">←</span> VOLVER AL INICIO
-            </a>
-        </nav>
-
-        <header class="encabezado">
-            <h1>NUESTROS PROYECTOS <span class="resaltado">RESIDENCIALES</span></h1>
-            <p class="subtitulo">Calidad y precisión en cada detalle estructural.</p>
-        </header>
-
-        <section class="grid-proyectos">
-            <article class="tarjeta-proyecto">
-                <img src="img/casa1.jpg" alt="Villa en el Bosque">
-                <div class="capa-detalle">
-                    <h3>Villa Moderna</h3>
-                    <p>Diseño estructural y ejecución.</p>
-                    <button class="btn-ver">Ver detalles</button>
-                </div>
-            </article>
-
-            <article class="tarjeta-proyecto">
-                <img src="img/casa2.png" alt="Edificio Arkan">
-                <div class="capa-detalle">
-                    <h3>Residencia Horizonte</h3>
-                    <p>Acabados de lujo y sostenibilidad.</p>
-                    <button class="btn-ver">Ver detalles</button>
-                </div>
-            </article>
-        </section>
+    <div class="top-bar">
+        <div class="contenedor">
+            <span>📞 LLÁMANOS: +XX XXX XXX XXX</span>
+            <span>✉️ CONTACTO@ARKAN.COM</span>
+        </div>
     </div>
+
+    <nav class="navbar">
+        <div class="contenedor nav-flex">
+            <div class="logo">ARKAN<span>ENGINEERING</span></div>
+            <ul class="menu">
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="#">SERVICIOS</a></li>
+                <li><a href="#" class="active">PROYECTOS</a></li>
+                <li><a href="#">NOSOTROS</a></li>
+                <li><a href="#">CONTACTO</a></li>
+            </ul>
+            <a href="#" class="btn-rental">SOLICITAR COTIZACIÓN</a>
+        </div>
+    </nav>
+
+    <header class="header-industrial">
+        <div class="overlay-dark">
+            <h1>NUESTROS PROYECTOS <span>RESIDENCIALES</span></h1>
+            <p>Construyendo el futuro con acero y precisión.</p>
+        </div>
+    </header>
+
+    <main class="contenedor seccion-proyectos">
+        <div class="grid-proyectos">
+            <div class="proyecto-card">
+                <img src="img/casa1.jpg" alt="Proyecto">
+                <div class="cuerpo-card">
+                    <h3>INGENIERÍA MODERNA</h3>
+                    <p>Diseño y ejecución estructural de alta complejidad.</p>
+                    <a href="#" class="btn-leer-mas">VER MÁS →</a>
+                </div>
+            </div>
+            <div class="proyecto-card">
+                <img src="img/casa2.png" alt="Proyecto">
+                <div class="cuerpo-card">
+                    <h3>RESIDENCIA PREMIUM</h3>
+                    <p>Acabados industriales con máxima durabilidad.</p>
+                    <a href="#" class="btn-leer-mas">VER MÁS →</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
 </body>
 </html>

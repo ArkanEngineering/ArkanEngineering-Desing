@@ -1,54 +1,38 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Residencial - ARKAN</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
-</head>
 <body class="residencial-page">
+    <div class="background-overlay"></div>
 
-    <header class="header-simple">
-        <a href="index.html" class="btn-volver">
-            <span class="flecha">←</span> VOLVER AL INICIO
-        </a>
-    </header>
+    <div class="contenedor-principal">
+        <nav class="nav-superior">
+            <a href="index.html" class="btn-volver-pro">
+                <span class="icono">🏠</span> VOLVER AL INICIO
+            </a>
+        </nav>
 
-    <main class="contenedor-principal">
-        <section class="encabezado-seccion">
-            <h1>Nuestros Proyectos <span class="resaltado">Residenciales</span></h1>
+        <header class="encabezado-seccion">
+            <h1>NUESTROS PROYECTOS <span class="resaltado">RESIDENCIALES</span></h1>
             <p class="intro">Calidad y precisión en cada detalle estructural.</p>
-        </section>
+        </header>
 
-        <section class="grid-proyectos">
-            <article class="tarjeta-proyecto">
-                <div class="contenedor-imagen">
-                    <img src="img/casa1.jpg" alt="Edificio Las Palmas">
-                    <div class="overlay">
-                        <div class="info-proyecto">
-                            <h3>Edificio Las Palmas</h3>
-                            <p>Diseño estructural y ejecución.</p>
-                            <span class="btn-ver-mas">Ver detalles</span>
-                        </div>
-                    </div>
-                </div>
+       <section class="grid-proyectos">
+    <article class="tarjeta-proyecto">
+        <img src="img/casa1.jpg" alt="Villa Moderna">
+        <div class="info-flotante">
+            <h3>Villa Moderna</h3>
+            <p>Diseño estructural y ejecución.</p>
+            <a href="#" class="btn-detalles">Ver detalles</a>
+        </div>
+    </article>
+
+    <article class="tarjeta-proyecto">
+        <img src="img/casa2.png" alt="Residencia Horizonte">
+        <div class="info-flotante">
+            <h3>Residencia Horizonte</h3>
+            <p>Acabados de lujo y sostenibilidad.</p>
+            <a href="#" class="btn-detalles">Ver detalles</a>
+        </div>
+    </article>
+</section>
             </article>
-
-            <article class="tarjeta-proyecto">
-                <div class="contenedor-imagen">
-                    <img src="img/casa2.png" alt="Villa Moderna">
-                    <div class="overlay">
-                        <div class="info-proyecto">
-                            <h3>Villa Moderna</h3>
-                            <p>Remodelación y acabados.</p>
-                            <span class="btn-ver-mas">Ver detalles</span>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        </section>
-    </main>
-
+            </section>
+    </div>
 </body>
-</html>

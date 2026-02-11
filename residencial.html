@@ -2,34 +2,53 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Residencial - ARKAN</title>
-    <link rel="stylesheet" href="style.css"> </head>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
 <body class="residencial-page">
 
-    <div class="contenedor-principal">
-        <a href="index.html" class="btn-volver">← VOLVER AL INICIO</a>
+    <header class="header-simple">
+        <a href="index.html" class="btn-volver">
+            <span class="flecha">←</span> VOLVER AL INICIO
+        </a>
+    </header>
 
-        <h1>Nuestros Proyectos Residenciales</h1>
-        <p class="intro">Calidad y precisión en cada detalle estructural.</p>
+    <main class="contenedor-principal">
+        <section class="encabezado-seccion">
+            <h1>Nuestros Proyectos <span class="resaltado">Residenciales</span></h1>
+            <p class="intro">Calidad y precisión en cada detalle estructural.</p>
+        </section>
 
         <section class="grid-proyectos">
-            <div class="tarjeta-proyecto">
-                <img src="img/casa1.jpg" alt="Edificio Las Palmas">
-                <div class="info-proyecto">
-                    <h3>Edificio Las Palmas</h3>
-                    <p>Diseño estructural y ejecución.</p>
+            <article class="tarjeta-proyecto">
+                <div class="contenedor-imagen">
+                    <img src="img/casa1.jpg" alt="Edificio Las Palmas">
+                    <div class="overlay">
+                        <div class="info-proyecto">
+                            <h3>Edificio Las Palmas</h3>
+                            <p>Diseño estructural y ejecución.</p>
+                            <span class="btn-ver-mas">Ver detalles</span>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </article>
 
-            <div class="tarjeta-proyecto">
-                <img src="img/casa2.png" alt="Villa Moderna">
-                <div class="info-proyecto">
-                    <h3>Villa Moderna</h3>
-                    <p>Remodelación y acabados.</p>
+            <article class="tarjeta-proyecto">
+                <div class="contenedor-imagen">
+                    <img src="img/casa2.png" alt="Villa Moderna">
+                    <div class="overlay">
+                        <div class="info-proyecto">
+                            <h3>Villa Moderna</h3>
+                            <p>Remodelación y acabados.</p>
+                            <span class="btn-ver-mas">Ver detalles</span>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </article>
         </section>
-    </div>
+    </main>
 
 </body>
 </html>

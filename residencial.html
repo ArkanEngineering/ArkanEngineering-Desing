@@ -1,27 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Residencial - ARKAN</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
 <body class="residencial-page">
-    <div class="background-overlay"></div>
 
     <div class="contenedor-principal">
         <nav class="nav-superior">
             <a href="index.html" class="btn-volver-pro">
-                <span class="icono">🏠</span> VOLVER AL INICIO
+                <span class="flecha">←</span> VOLVER AL INICIO
             </a>
         </nav>
 
-        <header class="encabezado-seccion">
+        <header class="encabezado">
             <h1>NUESTROS PROYECTOS <span class="resaltado">RESIDENCIALES</span></h1>
-            <p class="intro">Calidad y precisión en cada detalle estructural.</p>
+            <p class="subtitulo">Calidad y precisión en cada detalle estructural.</p>
         </header>
 
         <section class="grid-proyectos">
             <article class="tarjeta-proyecto">
-                <img src="img/casa1.jpg" alt="Villa Moderna">
-                <div class="info-flotante">
+                <img src="img/casa1.jpg" alt="Villa en el Bosque">
+                <div class="capa-detalle">
                     <h3>Villa Moderna</h3>
                     <p>Diseño estructural y ejecución.</p>
-                    <a href="#" class="btn-detalles">Ver detalles</a>
+                    <button class="btn-ver">Ver detalles</button>
                 </div>
             </article>
-            </section>
+
+            <article class="tarjeta-proyecto">
+                <img src="img/casa2.png" alt="Edificio Arkan">
+                <div class="capa-detalle">
+                    <h3>Residencia Horizonte</h3>
+                    <p>Acabados de lujo y sostenibilidad.</p>
+                    <button class="btn-ver">Ver detalles</button>
+                </div>
+            </article>
+        </section>
     </div>
+
 </body>
+</html>

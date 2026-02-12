@@ -276,3 +276,89 @@ body {
     font-weight: bold;
     font-size: 14px;
 }
+/* Contenedor Principal */
+.rental-section {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 60px 20px;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+}
+
+.rental-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+/* Flexbox para las tarjetas */
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+/* Estilo de cada Tarjeta */
+.card {
+    background-color: #262626;
+    border: 1px solid #444;
+    width: 350px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-color: #ffb400;
+}
+
+.card-image img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 30px 20px;
+}
+
+.card-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    color: #ccc;
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+}
+
+/* Botones Amarillos */
+.btn-details {
+    background-color: #ffb400;
+    color: #000;
+    text-decoration: none;
+    padding: 12px 25px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+/* Botón inferior Blanco */
+.catalog-footer {
+    margin-top: 50px;
+}
+
+.btn-catalog {
+    border: 2px solid white;
+    color: white;
+    text-decoration: none;
+    padding: 15px 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-catalog:hover {
+    background-color: white;
+    color: black;
+}

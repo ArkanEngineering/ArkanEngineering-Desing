@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arkan Engineering & Design</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;900&display=swap" rel="stylesheet">
     
     <style>
-        body { margin: 0; font-family: 'Montserrat', sans-serif; background-color: #f4f4f4; color: #333; }
+        /* RESET GENERAL */
+        body { margin: 0; font-family: 'Montserrat', sans-serif; background-color: #1a1a1a; color: #333; overflow-x: hidden; }
 
-        /* Navegación */
+        /* NAVEGACIÓN */
         nav {
             background: rgba(0, 0, 0, 0.9);
             padding: 15px 50px;
@@ -20,142 +21,81 @@
             width: 100%;
             z-index: 1000;
             box-sizing: border-box;
+            border-bottom: 1px solid #333;
         }
 
-        .nav-links { color: white; text-transform: uppercase; font-weight: bold; }
-
-        /* Sección Hero con imagen real de fondo */
-        .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-                        url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop') no-repeat center center/cover;
-            height: 80vh; /* Bajé un poco la altura para que se vea mejor en laptops */
+        /* SECCIÓN HERO */
+        .heroe {
+            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
             color: white;
-            padding: 0 20px;
         }
 
-        .hero h1 { font-size: 3rem; margin-bottom: 10px; }
+        .heroe-content h1 { font-size: 3.5rem; margin: 0; font-weight: bold; }
 
         .btn-cotizar {
-            background-color: #FBDC05;
+            background-color: #ffeb3b;
             color: #000;
-            padding: 15px 30px;
+            padding: 18px 35px;
             text-decoration: none;
             font-weight: bold;
-            border-radius: 5px;
+            border-radius: 4px;
             transition: 0.3s;
+            display: inline-block;
+            text-transform: uppercase;
+            margin-top: 20px;
         }
 
-        /* Sección Proyectos */
-        .proyectos-container { padding: 60px 20px; max-width: 1200px; margin: auto; }
-        .proyectos-container h2 { text-align: center; margin-bottom: 40px; font-size: 2.5rem; }
-
+        /* GRID DE PROYECTOS (BLANCO) */
+        .proyectos-container { padding: 80px 5%; text-align: center; background: #fff; }
         .grid-proyectos {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
+            gap: 30px;
+            max-width: 1200px;
+            margin: auto;
         }
-
         .proyecto-card {
-            background: white;
-            border-radius: 12px;
+            background: #fff;
+            border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             transition: 0.3s;
         }
+        .proyecto-card img { width: 100%; height: 250px; object-fit: cover; }
+        .proyecto-info { padding: 25px; text-align: left; }
 
-        .proyecto-card:hover { transform: translateY(-10px); }
-
-        /* Ajuste para que las imágenes se vean SIEMPRE */
-        .proyecto-card img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            display: block;
-            background-color: #ddd; /* Color gris si la imagen falla */
+        /* ESTILOS PARA LA SECCIÓN DE RENTA GIGANTE */
+        .renta-section { width: 100%; background-color: #1a1a1a; padding: 100px 0; color: white; }
+        .renta-grid { display: grid; grid-template-columns: repeat(3, 1fr); width: 100%; border-top: 1px solid #333; }
+        .renta-card { border-right: 1px solid #333; background: #1a1a1a; }
+        .renta-img { width: 100%; height: 450px; object-fit: cover; }
+        
+        .btn-renta {
+            background-color: #ffcc00;
+            color: black;
+            text-decoration: none;
+            padding: 15px 30px;
+            font-weight: bold;
+            display: inline-block;
+            text-transform: uppercase;
         }
-
-        .proyecto-info { padding: 20px; }
-        .proyecto-info h3 { margin: 0 0 10px 0; color: #222; }
-        .proyecto-info p { font-size: 0.9rem; color: #666; line-height: 1.5; }
-        <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arkan Engineering & Design</title>
-    <link rel="stylesheet" href="style.css">
+    </style>
 </head>
 <body>
-        /* Reset General */
-body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-
-/* Sección Hero con Imagen de Fondo Correcta */
-.heroe {
-    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('img/fondo.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 80vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-}
-
-.heroe-content h1 { font-size: 3.5rem; margin: 0; font-weight: bold; }
-.heroe-content p { font-size: 1.2rem; margin: 20px 0 40px; opacity: 0.9; }
-
-/* Botón Cotizar (Amarillo) */
-.btn-cotizar {
-    background-color: #ffeb3b;
-    color: #000;
-    padding: 18px 35px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 4px;
-    transition: 0.3s;
-    display: inline-block;
-    text-transform: uppercase;
-}
-.btn-cotizar:hover { background-color: #fdd835; transform: scale(1.05); }
-
-/* Grid de Proyectos Profesional */
-.proyectos-container { padding: 80px 5%; text-align: center; background: #fff; }
-.proyectos-container h2 { font-size: 2.5rem; margin-bottom: 50px; color: #333; }
-
-.grid-proyectos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    max-width: 1200px;
-    margin: auto;
-}
-
-.proyecto-card {
-    background: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    transition: 0.3s;
-}
-.proyecto-card:hover { transform: translateY(-10px); }
-.proyecto-card img { width: 100%; height: 250px; object-fit: cover; }
-.proyecto-info { padding: 25px; text-align: left; }
-.proyecto-info h3 { margin: 0 0 10px 0; color: #222; }
-.proyecto-info p { color: #666; font-size: 0.95rem; line-height: 1.5; }
-    </style>
 
     <nav>
         <div style="color: #ffeb3b; font-weight: bold; font-size: 1.2rem;">ARKAN</div>
-        <div class="nav-links">Ingeniería & Diseño</div>
+        <div style="color: white; text-transform: uppercase; font-weight: bold;">Ingeniería & Diseño</div>
     </nav>
 
-<header class="heroe">
+    <header class="heroe">
         <div class="heroe-content">
             <h1>ARKAN ENGINEERING & DESIGN</h1>
             <p>Innovación y Solidez en cada proyecto de construcción.</p>
@@ -166,187 +106,77 @@ body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
     <section id="proyectos" class="proyectos-container">
         <h2>Nuestros Proyectos</h2>
         <div class="grid-proyectos">
-            
-    <div class="proyecto-card">
-                <img src="img/proyecto1.jpg" alt="Edificación Residencial">
-              <a class="proyecto-info">
-                    <a href="residencial.html" style="text-decoration: none; color: inherit;">
-    <h3>Edificación Residencial</h3>
-</a>
-                    <p>Diseño estructural y ejecución de obra con los más altos estándares.</p>
-               </a>
+            <div class="proyecto-card">
+                <img src="img/proyecto1.jpg" alt="Residencial">
+                <div class="proyecto-info">
+                    <h3>Edificación Residencial</h3>
+                    <p>Diseño estructural y ejecución de obra.</p>
+                </div>
             </div>
-
             <div class="proyecto-card">
                 <img src="img/proyecto2.png" alt="Infraestructura">
                 <div class="proyecto-info">
-                   <a href="remodelaciones.html" style="text-decoration: none; color: inherit;">
-    <h3>Remodelaciones e Infraestructura</h3>
-</a>
-                    <p>Soluciones integrales en pavimentación y drenajes urbanos.</p>
+                    <h3>Infraestructura</h3>
+                    <p>Soluciones en pavimentación y drenajes.</p>
                 </div>
             </div>
-
             <div class="proyecto-card">
-                <img src="img/proyecto3.jpg" alt="Diseño Arquitectónico">
+                <img src="img/proyecto3.jpg" alt="Diseño">
                 <div class="proyecto-info">
-                  <a href="diseno.html" style="text-decoration: none; color: inherit;">
-    <h3>Diseño Arquitectónico</h3>
-</a>
-                    <p>Planificación y modelado 3D para proyectos modernos.</p>
+                    <h3>Diseño Arquitectónico</h3>
+                    <p>Planificación y modelado 3D.</p>
                 </div>
             </div>
-  <section style="background-color: #1a1a1a; width: 100%; padding: 100px 0; margin: 0; font-family: 'Segoe UI', Roboto, sans-serif; color: white; display: block;">
-    
-    <div style="width: 90%; margin: 0 auto 70px auto; text-align: left;">
-        <h2 style="font-size: 3.5rem; text-transform: uppercase; font-weight: 800; margin-bottom: 20px; letter-spacing: -1px; line-height: 1;">EQUIPMENT RENTAL <br>& LEASING</h2>
-        <p style="font-size: 1.2rem; opacity: 0.8; max-width: 800px; line-height: 1.6;">Access a vast fleet of specialized heavy machinery for projects of any scale, ensuring maximum efficiency and reliability.</p>
-    </div>
+        </div>
+    </section>
 
-    <div style="display: grid; grid-template-columns: repeat(3, 1fr); width: 100%; gap: 5px; background-color: #333; border-top: 1px solid #333; border-bottom: 1px solid #333;">
-        
-        <div style="background-color: #1a1a1a; padding: 0; display: flex; flex-direction: column; min-height: 650px;">
-            <div style="width: 100%; height: 450px; overflow: hidden;">
-                <img src="img/excavadora.jpg" alt="Excavadoras" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <div style="padding: 40px; text-align: left;">
-                <h3 style="font-size: 1.4rem; font-weight: 700; margin-bottom: 15px; letter-spacing: 1px;">EXCAVATORS & EARTHMOVERS</h3>
-                <p style="color: #aaa; font-size: 1rem; margin-bottom: 30px;">Efficient digging & material handling for large-scale construction.</p>
-                <a href="#" style="background-color: #ffcc00; color: black; text-decoration: none; padding: 18px 40px; font-weight: bold; text-transform: uppercase; font-size: 0.9rem; display: inline-block;">VIEW DETAILS</a>
-            </div>
+    <section class="renta-section">
+        <div style="padding: 0 5% 50px 5%;">
+            <h2 style="font-size: 3.5rem; font-family: 'Roboto', sans-serif; font-weight: 900; color: #ffcc00; margin: 0;">EQUIPMENT RENTAL & LEASING</h2>
+            <p style="font-size: 1.2rem; opacity: 0.7;">Access a vast fleet of specialized heavy machinery for projects of any scale.</p>
         </div>
 
-        <div style="background-color: #1a1a1a; padding: 0; display: flex; flex-direction: column; min-height: 650px; border-left: 1px solid #333; border-right: 1px solid #333;">
-            <div style="width: 100%; height: 450px; overflow: hidden;">
-                <img src="img/gruas.jpg" alt="Grúas" style="width: 100%; height: 100%; object-fit: cover;">
+        <div class="renta-grid">
+            <div class="renta-card">
+                <img src="img/excavadora.jpg" class="renta-img">
+                <div style="padding: 40px;">
+                    <h3>EXCAVATORS & EARTHMOVERS</h3>
+                    <p style="color: #aaa; margin-bottom: 25px;">Efficient digging & material handling.</p>
+                    <a href="#" class="btn-renta">VIEW DETAILS</a>
+                </div>
             </div>
-            <div style="padding: 40px; text-align: left;">
-                <h3 style="font-size: 1.4rem; font-weight: 700; margin-bottom: 15px; letter-spacing: 1px;">CRANES & LIFTING EQUIPMENT</h3>
-                <p style="color: #aaa; font-size: 1rem; margin-bottom: 30px;">Heavy-duty vertical transport and lifting solutions.</p>
-                <a href="#" style="background-color: #ffcc00; color: black; text-decoration: none; padding: 18px 40px; font-weight: bold; text-transform: uppercase; font-size: 0.9rem; display: inline-block;">VIEW DETAILS</a>
+            <div class="renta-card">
+                <img src="img/gruas.jpg" class="renta-img">
+                <div style="padding: 40px;">
+                    <h3>CRANES & LIFTING</h3>
+                    <p style="color: #aaa; margin-bottom: 25px;">Heavy-duty vertical transport.</p>
+                    <a href="#" class="btn-renta">VIEW DETAILS</a>
+                </div>
+            </div>
+            <div class="renta-card" style="border-right: none;">
+                <img src="img/transporte.jpg" class="renta-img">
+                <div style="padding: 40px;">
+                    <h3>HAULAGE & TRANSPORT</h3>
+                    <p style="color: #aaa; margin-bottom: 25px;">Bulk material logistics.</p>
+                    <a href="#" class="btn-renta">VIEW DETAILS</a>
+                </div>
             </div>
         </div>
+    </section>
 
-        <div style="background-color: #1a1a1a; padding: 0; display: flex; flex-direction: column; min-height: 650px;">
-            <div style="width: 100%; height: 450px; overflow: hidden;">
-                <img src="img/transporte.jpg" alt="Transporte" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <div style="padding: 40px; text-align: left;">
-                <h3 style="font-size: 1.4rem; font-weight: 700; margin-bottom: 15px; letter-spacing: 1px;">HAULAGE & TRANSPORT</h3>
-                <p style="color: #aaa; font-size: 1rem; margin-bottom: 30px;">Reliable bulk material logistics and heavy transport services.</p>
-                <a href="#" style="background-color: #ffcc00; color: black; text-decoration: none; padding: 18px 40px; font-weight: bold; text-transform: uppercase; font-size: 0.9rem; display: inline-block;">VIEW DETAILS</a>
-            </div>
+    <section style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 50px; padding: 100px 10%; background-color: #222;">
+        <div style="flex: 1; min-width: 320px;">
+            <img src="img/oficina1.png" style="width: 100%; border-radius: 15px; border: 2px solid #ffcc00;">
         </div>
+        <div style="flex: 1; min-width: 320px; color: white;">
+            <h3 style="color: #ffcc00; font-size: 2.5rem;">Construyendo el futuro con bases sólidas</h3>
+            <p style="color: #ccc; font-size: 1.1rem; line-height: 1.8;">Somos una empresa líder en el sector de la ingeniería, especializada en brindar soluciones estructurales e innovadoras.</p>
+        </div>
+    </section>
 
-    </div>
+    <footer style="background: #000; color: white; padding: 50px 5%; text-align: center; border-top: 1px solid #333;">
+        <p>&copy; 2026 ARKAN ENGINEERING - Sosua, Rep. Dominicana</p>
+    </footer>
 
-    <div style="margin-top: 80px; text-align: center;">
-        <a href="#" style="border: 2px solid white; color: white; text-decoration: none; padding: 20px 60px; font-weight: bold; text-transform: uppercase; font-size: 1rem; letter-spacing: 2px; transition: 0.3s;">
-            BROWSE FULL CATALOG
-        </a>
-    </div>
-</section>
 </body>
 </html>
-    
-</section>
-            </p>
-  <section style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 50px; padding: 80px 10%; background-color: #222222; color: #ffffff; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
-
-    <div style="flex: 1; min-width: 320px; max-width: 600px;">
-        <img src="img/oficina1.png" alt="Equipo Arkan Engineering" style="width: 100%; border-radius: 15px; border: 2px solid #ffcc00; box-shadow: 0 20px 40px rgba(0,0,0,0.5);">
-    </div>
-    <div style="flex: 1; min-width: 320px; text-align: left;">
-        <h2 style="color: #ffffff; font-size: 1.1rem; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 10px; opacity: 0.8;">ARKAN ENGINEERING</h2>
-        <h3 style="color: #ffcc00; font-size: 2.5rem; margin: 0 0 25px 0; line-height: 1.1; font-weight: bold;">Construyendo el futuro con bases sólidas</h3>
-        
-        <p style="color: #cccccc; line-height: 1.8; font-size: 1.1rem; margin-bottom: 30px;">
-            Somos una empresa líder en el sector de la ingeniería, especializada en brindar soluciones estructurales e innovadoras. Con un equipo de expertos comprometidos con la excelencia, transformamos visiones en realidades tangibles.
-        </p>
-
-        <div style="display: grid; gap: 15px;">
-            <div style="display: flex; align-items: center; gap: 15px;">
-                <span style="color: #ffcc00; font-size: 1.5rem;">✓</span>
-                <span style="font-size: 1.1rem;"><strong style="color: #ffcc00;">Excelencia:</strong> Calidad técnica garantizada.</span>
-            </div>
-            <div style="display: flex; align-items: center; gap: 15px;">
-                <span style="color: #ffcc00; font-size: 1.5rem;">✓</span>
-                <span style="font-size: 1.1rem;"><strong style="color: #ffcc00;">Innovación:</strong> Vanguardia tecnológica.</span>
-            </div>
-            <div style="display: flex; align-items: center; gap: 15px;">
-                <span style="color: #ffcc00; font-size: 1.5rem;">✓</span>
-                <span style="font-size: 1.1rem;"><strong style="color: #ffcc00;">Integridad:</strong> Transparencia total.</span>
-            </div>
-        </div>
-    </div>
-
-<section class="contacto-seccion" style="background-color: #1a1a1a; padding: 80px 10%; color: white; text-align: center;">
-    <div style="max-width: 800px; margin: 0 auto;">
-        <h2 style="color: #ffcc00; font-size: 2.2rem; margin-bottom: 10px;">¿Tienes un proyecto en mente?</h2>
-        <p style="color: #ccc; margin-bottom: 40px;">Déjanos tus datos y un experto de <strong>Arkan Engineering</strong> se pondrá en contacto contigo.</p>
-        
-        <form style="display: flex; flex-direction: column; gap: 20px; text-align: left;">
-            <div style="display: flex; gap: 20px; flex-wrap: wrap;">
-                <input type="text" placeholder="Nombre" required style="flex: 1; min-width: 250px; padding: 15px; background: #2a2a2a; border: 1px solid #444; border-radius: 5px; color: white;">
-                <input type="email" placeholder="Correo" required style="flex: 1; min-width: 250px; padding: 15px; background: #2a2a2a; border: 1px solid #444; border-radius: 5px; color: white;">
-            </div>
-            <input type="text" placeholder="Asunto" required style="padding: 15px; background: #2a2a2a; border: 1px solid #444; border-radius: 5px; color: white;">
-            <textarea placeholder="Cuéntanos sobre tu proyecto..." rows="5" required style="padding: 15px; background: #2a2a2a; border: 1px solid #444; border-radius: 5px; color: white; resize: none;"></textarea>
-            
-            <button type="submit" style="background-color: #ffcc00; color: #000; padding: 18px; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; transition: 0.3s; letter-spacing: 1px;">
-                ENVIAR MENSAJE
-            </button>
-        </form>
-    </div>
-</section>
-      <footer class="footer-moderno">
-  <div class="footer-overlay">
-    <div class="footer-container">
-      
-      <div class="footer-col branding">
-        <h2>ARKAN<span>ENGINEERING</span></h2>
-        <p>Excelencia técnica y diseño innovador estructural...</p>
-        <div class="social-icons">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-        </div>
-      </div>
-
-      <div class="footer-col">
-        <h3>Navegación</h3>
-        <ul>
-          <li><a href="#">Inicio</a></li>
-          <li><a href="#">Remodelaciones</a></li>
-          <li><a href="#">Diseño</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h3>Contacto</h3>
-        <p><i class="fas fa-map-marker-alt"></i> Sosua, Rep. Dominicana</p>
-        <p><i class="fas fa-envelope"></i> constructoraancesps@gmail.com</p>
-        <p><i class="fas fa-phone"></i> +1 849 273 1993</p>
-      </div>
-
-      <div class="footer-col certs">
-        <h3>Certificaciones</h3>
-        <div class="cert-icons">
-          <div class="cert-item">
-            <img src="icono-calidad.png" alt="Calidad">
-            <span>Calidad</span>
-          </div>
-          <div class="cert-item">
-            <img src="icono-iso.png" alt="Certificada">
-            <span>Certificada</span>
-          </div>
-        </div>
-      </div>
-
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 ARKAN ENGINEERING - Todos los derechos reservados.</p>
-    </div>
-  </div>
-</footer>

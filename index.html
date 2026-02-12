@@ -28,8 +28,10 @@
             background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('img/fondo.jpg');
             background-size: cover;
             background-position: center;
+            background-attachment: fixed; /* Añadido para continuidad */
             height: 75vh;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
@@ -45,10 +47,27 @@
             border-radius: 4px;
             transition: 0.3s;
             text-transform: uppercase;
+            margin-top: 20px;
         }
 
-        /* PROYECTOS */
-        .proyectos-container { padding: 80px 5%; text-align: center; background: #fff; }
+        /* PROYECTOS - Actualizado con el mismo fondo */
+        .proyectos-container { 
+            padding: 80px 5%; 
+            text-align: center; 
+            /* Aplicamos el mismo fondo que el Heroe */
+            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('img/fondo.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white; /* Texto general en blanco */
+        }
+
+        .proyectos-container h2 {
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+        }
+
         .grid-proyectos {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -56,18 +75,47 @@
             max-width: 1200px;
             margin: auto;
         }
+
         .proyecto-card {
-            background: #fff;
+            background: #fff; /* Las tarjetas mantienen fondo blanco para resaltar */
             border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
             transition: 0.3s;
             text-decoration: none;
             display: block;
+            color: #333; /* Texto interno de la tarjeta oscuro */
         }
+
         .proyecto-card:hover { transform: translateY(-10px); }
         .proyecto-card img { width: 100%; height: 250px; object-fit: cover; }
         .proyecto-info { padding: 25px; text-align: left; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <span style="color: white; font-weight: bold;">ARKAN ENGINEERING</span>
+    </nav>
+
+    <header class="heroe">
+        <h1>ARKAN ENGINEERING & DESIGN</h1>
+        <p>Innovación y Solidez en cada proyecto de construcción.</p>
+        <a href="#" class="btn-cotizar">COTIZAR</a>
+    </header>
+
+    <section class="proyectos-container">
+        <h2>Nuestros Proyectos</h2>
+        <div class="grid-proyectos">
+            <a href="#" class="proyecto-card">
+                <img src="img/proyecto1.jpg" alt="Proyecto">
+                <div class="proyecto-info">
+                    <h3>Edificio Corporativo</h3>
+                    <p>Construcción de alta gama.</p>
+                </div>
+            </a>
+            </div>
+    </section>
 
         /* RENTA DE EQUIPOS - Compacta y hacia el lado */
         .renta-section { background-color: #1a1a1a; padding: 60px 5%; color: white; text-align: center; }
